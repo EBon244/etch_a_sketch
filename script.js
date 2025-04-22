@@ -1,8 +1,13 @@
-var div = document.createElement("div");
-div.style.width = "100px";
-div.style.height = "100px";
-div.style.background = "red";
-div.style.color = "white";
-div.innerHTML = "Hello";
+const board = document.querySelector(".board");
 
-document.getElementById("square").appendChild(div);
+
+for (i = 0; i < 16 * 16; i++) {
+  const box = document.createElement("div");
+  box.classList.add('box');
+
+  board.appendChild(box);
+
+  box.addEventListener('mouseover', () => {
+    box.style.backgroundColor = "black";
+  })
+}
