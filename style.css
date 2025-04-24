@@ -19,6 +19,7 @@ h1 {
 .size {
     width: 300px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .container {
