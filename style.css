@@ -16,10 +16,13 @@ h1 {
     text-align: center;
 }
 
-.size {
-    width: 300px;
+.sizeBtn,
+.rainbowBtn,
+.shadeBtn {
+    width: 218px;
     margin: 0 auto;
     cursor: pointer;
+    border: none;
 }
 
 .container {
