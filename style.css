@@ -18,11 +18,24 @@ h1 {
 
 .sizeBtn,
 .rainbowBtn,
-.shadeBtn {
+.shadeBtn,
+.clearBtn,
+.resetBtn,
+.penColor {
     width: 218px;
-    margin: 0 auto;
+    padding: 5px;
+    margin: 5px auto;
+    margin-bottom: 10px;
     cursor: pointer;
     border: none;
+    border-radius: 5px;
+}
+
+
+
+button:active {
+    opacity: 65%;
+    outline: solid black 2px;
 }
 
 .container {
