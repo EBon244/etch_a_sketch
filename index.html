@@ -2,32 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etch-a-Sketch</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <h1>Etch-a-Sketch</h1>
+  <h1>Etch-a-Sketch</h1>
 
-    <div class="container">
-        <div class="top-button-container">
-            <button class="shadeBtn">Shading</button>
-            <button class="rainbowBtn">Rainbow</button>
-            <input type="color" class="penColor" value="#000000">
-        </div>
-        <div class="board"></div>
-
-        <div class="bottom-board-container">
-            <button class="clearBtn">Clear</button>
-            <button class="resetBtn">Reset All</button>
-            <button class="sizeBtn">Change size</button>
-        </div>
+  <div class="container">
+    <!-- Top control buttons -->
+    <div class="top-button-container">
+      <button class="shadeBtn">Shading</button>
+      <button class="rainbowBtn">Rainbow</button>
+      <input type="color" class="penColor" value="#000000" />
     </div>
 
+    <!-- Grid board -->
+    <div class="board"></div>
 
-    <script src="script.js"></script>
+    <!-- Bottom control buttons -->
+    <div class="bottom-board-container">
+      <button class="eraseBtn">Erase</button>
+      <button class="resetBtn">Reset</button>
+      <button class="sizeBtn">Change size</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

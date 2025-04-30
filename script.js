@@ -1,12 +1,15 @@
 const board = document.querySelector(".board");
 const sizeBtn = document.querySelector(".sizeBtn");
 const rainbowBtn = document.querySelector(".rainbowBtn");
-const shadeBtn = document.querySelector(".shadeBtn")
-const penColor = document.querySelector(".penColor")
+const shadeBtn = document.querySelector(".shadeBtn");
+const penColor = document.querySelector(".penColor");
+const resetBtn = document.querySelector(".resetBtn");
+const eraseBtn = document.querySelector(".eraseBtn");
 const BOARD_SIZE = 660;
 let boxSize = BOARD_SIZE / 16;
 let isRainbow = false;
 let isShade = false;
+let isErase = false;
 
 // Creates a Board
 function changeGridSize(gridSize) {
@@ -38,7 +41,7 @@ function changeGridSize(gridSize) {
       }
     })
   }
-}
+};
 
 // Prompt user for grid size
 sizeBtn.addEventListener("click", () => {
@@ -74,15 +77,30 @@ shadeBtn.addEventListener("click", () => {
 });
 
 
+let previous = penColor.value;
+eraseBtn.addEventListener("click", () => {
+  if (isErase === false) {
+    isErase = true;
+    penColor.value = "#FFFFFF";
+  } else {
+    isErase = false;
+    penColor.value = "#000000";
+  }
+});
+
+resetBtn.addEventListener("click", () => {
+  changeGridSize(16);
+});
+
+
 //Create default grid 16 * 16
-changeGridSize(16)
+changeGridSize(16);
 
 
 
 function random() {
   return Math.floor(Math.random() * 255) + 1;
-}
+};
 
 
 // Clear button to reset board retain size
-// Erase individually erase board piece by piece
