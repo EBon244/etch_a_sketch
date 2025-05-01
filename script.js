@@ -71,8 +71,8 @@ sizeBtn.addEventListener("click", () => {
 // Toggle rainbow mode 
 rainbowBtn.addEventListener("click", () => {
   if (isRainbow === false) {
+    offSwitch();
     isRainbow = true;
-    isShade = false;
   } else {
     isRainbow = false;
   }
@@ -81,8 +81,8 @@ rainbowBtn.addEventListener("click", () => {
 // Toggle shading mode 
 shadeBtn.addEventListener("click", () => {
   if (isShade === false) {
+    offSwitch();
     isShade = true;
-    isRainbow = false;
   } else {
     isShade = false;
   }
@@ -92,6 +92,7 @@ shadeBtn.addEventListener("click", () => {
 let previous = penColor.value;
 eraseBtn.addEventListener("click", () => {
   if (isErase === false) {
+    offSwitch();
     isErase = true;
     penColor.value = "#FFFFFF";
   } else {
@@ -103,9 +104,15 @@ eraseBtn.addEventListener("click", () => {
 // Reset grid to default size
 resetBtn.addEventListener("click", () => {
   changeGridSize(16);
+  offSwitch();
 });
 
 // Reset boolean
+function offSwitch() {
+  isRainbow = false;
+  isShade = false;
+  isErase = false;
+}
 
 // Initialize default grid
 changeGridSize(16);
